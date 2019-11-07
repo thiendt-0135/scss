@@ -1,12 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>SCSS-BEM</title>
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <p>scss</p>
+  <!-- header -->
+  <header class="header">
+    <div class="menu">
+      <nav class="menu__left">
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>home</span>
+              <i class="fas fa-sort-down"></i>
+            </a>
+            <ul class="nav nav__child">
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Beauty</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Health</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>features</span>
+              <i class="fas fa-sort-down"></i>
+            </a>
+            <ul class="nav nav__child">
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Beauty</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Health</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>positypes</span>
+              <i class="fas fa-sort-down"></i>
+            </a>
+            <ul class="nav nav__child">
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Beauty</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Health</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>pages</span>
+              <i class="fas fa-sort-down"></i>
+            </a>
+            <ul class="nav nav__child">
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Beauty</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Health</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span>categories</span>
+              <i class="fas fa-sort-down"></i>
+            </a>
+            <ul class="nav nav__child">
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Beauty</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Health</a></li>
+              <li class="nav__item nav__child--item"><a class="nav__link" href="#">Lifestyle</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"><span>contact</span></a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__like"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__instagram"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__google"><i class="fab fa-google-plus-g"></i></a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="header__logo"><a href="#" class="header__logo-link">NOÉMI</a></h1>
+  </header>
+
+  <section class="page-body">
+    <!-- featured-posts -->
+    <section class="featured-area">
+      <div class="featured-posts js-featured">
+        <div class="featured-posts__content">
+          <div class="featured-posts__wrapper">
+            <img src="./images/slide1.png" alt="health" class="featured-posts__image">
+            <div class="featured-posts__detail">
+              <div class="featured-posts__category">
+                <a class="featured-posts__category-link" href="#">beauty</a>
+                <a class="featured-posts__category-link" href="#">health</a>
+                <a class="featured-posts__category-link" href="#">lifestyle</a>
+              </div>
+              <h3 class="featured-posts__title">from frapefruit to lemos to oranges, citrus dóe you good!</h3>
+              <div class="featured-posts__footer">
+                <p class="featured-posts__date">June 14, 2015</p>
+                <div class="featured-posts__comment">
+                  <a class="featured-posts__comment-link" href="#"><i class="fas fa-comment"></i> <span>24</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-posts__content">
+          <div class="featured-posts__wrapper">
+            <img src="./images/slide3.png" alt="health" class="featured-posts__image">
+            <div class="featured-posts__detail">
+              <div class="featured-posts__category">
+                <a class="featured-posts__category-link" href="#">Beauty</a>
+              </div>
+              <h3 class="featured-posts__title">Keep Makeup Looking Fresh Take A Powder</h3>
+              <div class="featured-posts__footer">
+                <p class="featured-posts__date">June 14, 2015</p>
+                <div class="featured-posts__comment">
+                  <a class="featured-posts__comment-link" href="#"><i class="fas fa-comment"></i> <span>24</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-posts__content">
+          <div class="featured-posts__wrapper">
+            <img src="./images/slide2.png" alt="health" class="featured-posts__image">
+            <div class="featured-posts__detail">
+              <div class="featured-posts__category">
+                <a class="featured-posts__category-link" href="#">health</a>
+              </div>
+              <h3 class="featured-posts__title">5 Tips To Supercharge Your Motivation</h3>
+              <div class="featured-posts__footer">
+                <p class="featured-posts__date">June 14, 2015</p>
+                <div class="featured-posts__comment">
+                  <a class="featured-posts__comment-link" href="#"><i class="fas fa-comment"></i> <span>24</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-posts__content">
+          <div class="featured-posts__wrapper">
+            <img src="./images/slide3.png" alt="health" class="featured-posts__image">
+            <div class="featured-posts__detail">
+              <div class="featured-posts__category">
+                <a class="featured-posts__category-link" href="#">Beauty</a>
+              </div>
+              <h3 class="featured-posts__title">Keep Makeup Looking Fresh Take A Powder</h3>
+              <div class="featured-posts__footer">
+                <p class="featured-posts__date">June 14, 2015</p>
+                <div class="featured-posts__comment">
+                  <a class="featured-posts__comment-link" href="#"><i class="fas fa-comment"></i> <span>24</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-controls"></div>
+    </section>
+
+    <section class="main">
+      <!-- main-content -->
+      <div class="main-content">
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image1.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">Barbecue Party Tips For A Truly Amazing Event</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took ever since the 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image2.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+              </div>
+              <h3 class="post__title">The Principles Of Scientific Cooking</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took ever since the 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image3.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">How To Meet That Special Someone</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took ever since the 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image4.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">How To Meet That Special Someone</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took 1500s when an unknown printer took </p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image5.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">How To Meet That Special Someone</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image6.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">How To Meet That Special Someone</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took since the 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="post">
+          <div class="post__thumbnail">
+            <a href="#"><img src="./images/Art-image7.png" alt="health" class="post__image"></a>
+          </div>
+          <div class="post__description">
+            <div class="post__header">
+              <div class="post__category">
+                <a class="post__category-link" href="#">ART</a>
+                <a class="post__category-link" href="#">HEALTH</a>
+              </div>
+              <h3 class="post__title">How To Meet That Special Someone</h3>
+              <span class="post__date">June 14, 2015</span>
+              <a href="#" class="post__author">by Author Doe</a>
+            </div>
+            <div class="post__content">
+              <p class="post__content-preview js-content-preview">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took since the 1500s when an unknown printer took</p>
+              <a href="#" class="post__more">...</a>
+            </div>
+            <div class="post__footer">
+              <div class="post__icon">
+                <div class="post__icon-left">
+                  <div class="post__comment">
+                    <a href="#" class="post__comment-link"><i class="far fa-comment"></i> 24</a>
+                  </div>
+                </div>
+                <div class="post__icon-right">
+                  <ul class="social">
+                    <li class="social__item">
+                      <a href="#" class="social__link social__share">Share</a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <section class="about-me">
+          <img src="./images/avatar-about-me.png" alt="about-me" class="about-me__avatar">
+          <h2 class="about-me__title">about me</h2>
+          <p class="about-me__desc">Hi! Dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever</p>
+          <p class="about-me__follow">follow me on</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link social__share">Share</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__pinterest"><i class="fab fa-pinterest"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+          </ul>
+        </section>
+        <section class="news-letter">
+          <h2 class="news-letter__title">newsletter</h2>
+          <form action="#" method="GET">
+            <input class="news-letter__input" type="text" name="email" placeholder="Your email address">
+            <button class="news-letter__btn">SUBSCRIBE</button>
+          </form>
+        </section>
+        <section class="sidebar-instagram">
+          <h2 class="sidebar-instagram__title">follow@noemi.theme</h2>
+          <div class="instagram__pics">
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme1.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme2.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme3.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme4.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme5.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme6.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme7.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme8.png" alt="instagram"></a>
+            <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme9.png" alt="instagram"></a>
+          </div>
+        </section>
+        <section class="sidebar-categories">
+          <h2 class="sidebar-categories__title">categories</h2>
+          <ul class="nav">
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Beauty</a>
+              <span class="sidebar-categories__item-number">12</span>
+            </li>
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Health</a>
+              <span class="sidebar-categories__item-number">4</span>
+            </li>
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Lifestyle</a>
+              <span class="sidebar-categories__item-number">145</span>
+            </li>
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Music</a>
+              <span class="sidebar-categories__item-number">28</span>
+            </li>
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Sport</a>
+              <span class="sidebar-categories__item-number">62</span>
+            </li>
+            <li class="sidebar-categories__item nav__item">
+              <a class="sidebar-categories__item-link" href="#">Yoga</a>
+              <span class="sidebar-categories__item-number">8</span>
+            </li>
+          </ul>
+        </section>
+        <section class="recent-posts">
+          <h2 class="recent-posts__title">recent posts</h2>
+          <div class="post">
+            <div class="post__image">
+              <a href="#"><img src="./images/recent-post1.png" alt="recent posts"></a>
+            </div>
+            <div class="post__content">
+              <p class="post__date">June 14, 2015</p>
+              <h3 class="post__title"><a href="#" class="post__link">Lorem Ipsum right now.</a></h3>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__image">
+              <a href="#"><img src="./images/recent-post2.png" alt="recent posts"></a>
+            </div>
+            <div class="post__content">
+              <p class="post__date">June 14, 2015</p>
+              <h3 class="post__title"><a href="#" class="post__link">Lorem Ipsum Dolor available.</a></h3>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__image">
+              <a href="#"><img src="./images/recent-post3.png" alt="recent posts"></a>
+            </div>
+            <div class="post__content">
+              <p class="post__date">June 14, 2015</p>
+              <h3 class="post__title"><a href="#" class="post__link">Lorem Ipsum available right now.</a></h3>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__image">
+              <a href="#"><img src="./images/recent-post4.png" alt="recent posts"></a>
+            </div>
+            <div class="post__content">
+              <p class="post__date">June 14, 2015</p>
+              <h3 class="post__title"><a href="#" class="post__link">Lorem Ipsum available right now.</a></h3>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__image">
+              <a href="#"><img src="./images/recent-post5.png" alt="recent posts"></a>
+            </div>
+            <div class="post__content">
+              <p class="post__date">June 14, 2015</p>
+              <h3 class="post__title"><a href="#" class="post__link">Lorem Ipsum available right now.</a>
+              </h3>
+            </div>
+          </div>
+          <form action="#" method="GET" class="recent-posts__search">
+            <input type="text" name="search_input" class="recent-posts__search-input" placeholder="Search...">
+            <button class="recent-posts__search-btn"><i class="fas fa-search"></i></button>
+          </form>
+        </section>
+        <section class="banner">
+          <h2 class="banner__title">banner</h2>
+          <div class="banner__content">
+            <a href="#"><img src="./images/image-banner.png" alt="sidebar-banner"></a>
+          </div>
+        </section>
+        <section class="facebook-page">
+          <h2 class="facebook-page__title">find us on Facebook</h2>
+          <div class="fb-page" data-href="https://www.facebook.com/Hoisinhvienluoihoc/" data-tabs="" data-width="270px"
+            data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/Hoisinhvienluoihoc/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/Hoisinhvienluoihoc/">Hội sinh viên chăm học</a>
+            </blockquote>
+          </div>
+        </section>
+        <section class="tagcloud">
+          <h2 class="tagcloud__title">tags</h2>
+          <div>
+            <a class="tagcloud__link" href="/fashion">fashion</a>
+            <a class="tagcloud__link" href="/fashion">Music</a>
+            <a class="tagcloud__link" href="/fashion">lorem tag</a>
+            <a class="tagcloud__link" href="/fashion">tag</a>
+            <a class="tagcloud__link" href="/fashion">ipsum tag</a>
+            <a class="tagcloud__link" href="/fashion">travel</a>
+            <a class="tagcloud__link" href="/fashion">fashion</a>
+            <a class="tagcloud__link" href="/fashion">mucsic</a>
+          </div>
+        </section>
+      </aside>
+
+    </section>
+
+    <!-- instagram -->
+    <section class="instagram">
+      <h2 class="instagram__title">
+        follow@cityblock
+      </h2>
+      <p class="instagram__sub-title">
+        <i class="fab fa-instagram instagram__icon"></i>
+        <span>instagram</span>
+      </p>
+      <ul class="nav list-posts">
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product1.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product2.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product2.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product3.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product3.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product4.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product4.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product5.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product5.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product6.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product6.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product7.png" alt="post instagram">
+        </li>
+        <li class="nav__item list-posts__item js-post-item">
+          <img class="list-posts__image" src="./images/carousel-product7.png" alt="post instagram">
+          <img class="list-posts__image" src="./images/carousel-product1.png" alt="post instagram">
+        </li>
+      </ul>
+    </section>
+
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__top">
+      <ul class="footer-social">
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__tumblr"><i class="fab fa-tumblr"></i></a></li>
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__twitter"><i class="fab fa-twitter"></i></a></li>
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__pinterest"><i class="fab fa-pinterest"></i></a></li>
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__google"><i class="fab fa-google-plus-g"></i></a></li>
+        <li class="footer-social__item"><a href="#" class="footer-social__link social__instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <a href="#" class="footer__on-top" id="js-ontop">on top</a>
+      <p class="footer__copy-right">Copyright &copy; 2009-2016 City Blog LLC.</p>
+    </div>
+  </footer>
+  <!-- end-footer -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=477148333027741&autoLogAppEvents=1"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/truncateMe.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/master.js"></script>
 </body>
+
 </html>
