@@ -117,10 +117,19 @@
   display: flex;
   justify-content: space-between;
 
+  &__image {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all .8s ease;
+  }
+
   .slick-active {
     #{$this}__image {
-      transform: scale(1);
+      width: 100%;
       opacity: 1;
+      transform: scale(1);
+      transition: all .8s ease;
     }
   }
 
@@ -143,11 +152,16 @@
   &__wrapper {
     max-height: 360px;
     overflow: hidden;
-    background-color: $color-black;
     cursor: pointer;
+    background-color: $color-white;
+
+    &:hover {
+      background-color: $color-black;
+    }
 
     &:hover #{$this}__image {
-      opacity: .6;
+      opacity: .8;
+      transition: all .3s ease;
       transform: scale3d(1.25, 1.25, 1.25);
     }
 
@@ -155,13 +169,6 @@
       opacity: 1;
       transform: scaleX(1);
     }
-  }
-
-  &__image {
-    width: 100%;
-    opacity: 1;
-    transform: scale(1);
-    transition: all .3s;
   }
 
   &__detail {
@@ -241,29 +248,24 @@
 }
 
 .custom-dots {
-  $this: &;
+  $this: '.custom-dots';
   list-style: none;
-  display: flex;
 
-  &> :nth-child(n) {
-    display: flex;
-    cursor: pointer;
-    border: 1px solid $color-black;
-    border-radius: 50%;
+  & > :nth-child(n) {
+    display: inline-block;
     margin: 10px;
   }
 
   &__dot {
-    display: inline-block;
+    display: block;
     width: 10px;
     height: 10px;
-    background: $color-white;
     border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid $color-black;
   }
 
   .slick-active {
-    border: 1px solid $color-black;
-
     #{$this}__dot {
       background-color: $color-black;
     }
@@ -284,11 +286,23 @@
   padding-right: 110px;
 
   .post {
+    $this: '.post';
     position: relative;
     margin: 50px 0 120px 0;
 
-    &__image {
+    &__thumbnail {
       width: 380px;
+      max-height: 297px;
+      overflow: hidden;
+
+      &:hover #{$this}__image {
+        transform: scale(1.5);
+      }
+    }
+
+    &__image {
+      transform: scale(1.15);
+      transition: all .3s ease;
     }
 
     &__description {
@@ -329,8 +343,8 @@
         transition: all .3s ease;
       }
 
-      &:hover>a {
-        color: $color-tawny_3;
+      &:hover > a {
+        color: $color-tawny_1;
       }
     }
 
@@ -470,6 +484,11 @@
         transform: scale(1);
         opacity: 1;
       }
+
+      #{$this}__image-thumb:hover {
+        transform: scale(1.25);
+        transition: all .5s ease;
+      }
     }
 
     &__image-thumb {
@@ -549,7 +568,7 @@
     transition: color .3s ease;
 
     &__item {
-      padding-right: 20px;
+      padding: 0 10px;
     }
 
     &__link:hover {
@@ -585,30 +604,65 @@
   }
 
   &__input {
-    color: $color-tawny_1;
     width: 100%;
     box-sizing: border-box;
     border: 0;
     padding: 16px 30px;
     outline: 0;
     background-color: $color-blue_1;
+
+    &:focus {
+      border: 1px solid $color-tawny_1;
+    }
   }
 
   &__btn {
     @include format-text($font-raleway-bold, 14px, $color-white, null);
     margin-top: 18px;
+    position: relative;
     border: 0;
     padding: 15px;
     background-color: $color-tawny_1;
     width: 100%;
     outline: 0;
+    overflow: hidden;
     font-size: 14px;
     cursor: pointer;
     transition: all .3s ease;
 
-    &:hover {
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      height: 46px;
       background-color: $color-tawny_3;
-      color: $color-black;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      height: 46px;
+      background-color: $color-tawny_3;
+      transition: all .3s ease;
+    }
+
+    &:hover:before {
+      left: 0;
+      opacity: .3;
+      transition: all .4s ease 0s;
+    }
+
+    &:hover:after {
+      left: 0;
+      opacity: .3;
+      transition: all .4s ease .2s;
     }
   }
 }
@@ -688,11 +742,17 @@
 
     &__image {
       float: left;
-      transition: all .3s ease;
+      overflow: hidden;
+
+      .image {
+        transition: all .3s ease;
+        transform: scale(1);
+      }
     }
 
-    &__image:hover {
+    &__image:hover .image {
       opacity: .7;
+      transform: scale(1.5);
     }
 
     &__content {
@@ -735,28 +795,71 @@
 
     &-input {
       width: 100%;
+      height: 50px;
       padding: 18px 20px;
       border: 0;
       background-color: $color-blue_1;
       outline: 0;
       box-sizing: border-box;
+
+      &:focus {
+        border: 1px solid $color-tawny_1;
+      }
     }
 
     &-btn {
       position: absolute;
       top: 0;
       left: 82%;
-      padding: 18px;
+      width: 50px;
+      height: 50px;
       border: 0;
       outline: 0;
+      overflow: hidden;
       cursor: pointer;
       background-color: $color-tawny_1;
       color: $color-white;
       transition: all .3s ease;
-    }
 
-    &-btn:hover {
-      background-color: $color-tawny_3;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        top: -100%;
+        left: -70%;
+        background-color: $color-tawny_3;
+        transform: rotate(-40deg);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        top: -100%;
+        left: -70%;
+        background-color: $color-tawny_3;
+        transform: rotate(-40deg);
+      }
+
+      &:hover:before {
+        transform: rotate(0deg);
+        transition: all .4s ease 0s;
+        opacity: .3;
+        top: 0;
+        left: 0;
+      }
+
+      &:hover:after {
+        transform: rotate(0deg);
+        transition: all .4s ease .2s;
+        opacity: .3;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }
@@ -800,16 +903,62 @@
 
   &__link {
     @include format-text($font-opensans-bold, 12px, $color-black, null);
+    border: 0;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 3px $color-tawny_2;
+    color: $color-black;
     margin: 0 5px 5px 0;
-    padding: 2px 8px;
     text-transform: uppercase;
-    border: 3px solid $color-tawny_2;
     text-decoration: none;
     display: inline-block;
     transition: border .3s ease;
+    padding: 5px 10px;
+    position: relative;
+
+    &:before {
+      border: 0 solid transparent;
+      border-bottom-width: 3px;
+      border-left-width: 3px;
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:after {
+      border: 0 solid transparent;
+      border-top-width: 3px;
+      border-right-width: 3px;
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0;
+    }
 
     &:hover {
-      border: 3px solid $color-tawny;
+      color: $color-tawny_1;
+    }
+
+    &:hover:before {
+      border-color: $color-tawny_3;
+      transition: border-color .3s, width .3s, height .3s;
+      transition-delay: 0s, 0s, .25s;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover:after {
+      transition: border-color 0s, width .3s, height .3s;
+      transition-delay: 0s, .25s, 0s;
+      border-color: $color-tawny_3;
+      width: 100%;
+      height: 100%;
     }
   }
 
