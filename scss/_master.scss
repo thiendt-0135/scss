@@ -133,6 +133,8 @@
 
     #{$this}__detail {
       opacity: 1;
+      transform: scale(1);
+      transition: all .8s ease;
     }
   }
 
@@ -150,6 +152,7 @@
     max-height: 360px;
     overflow: hidden;
     cursor: pointer;
+    background-color: $color-white;
 
     &:hover {
       background-color: $color-black;

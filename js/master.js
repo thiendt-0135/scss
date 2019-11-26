@@ -5,6 +5,7 @@ $('.js-featured').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
+  infinite: true,
   arrows: false,
   dots: true,
   appendDots: $('.slide-controls'),
@@ -19,6 +20,7 @@ $('.js-featured').slick({
 $('.js-post-item').slick({
   slidesToShow: 1,
   autoplay: true,
+  infinite: true,
   autoplaySpeed: 5000,
   fade: true,
   arrows: false,
