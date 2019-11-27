@@ -39,3 +39,5 @@ $.truncateMe({
   trimTo: 18,
   add: '...',
 });
+
+$('.js-featured-posts').line(2, '...');

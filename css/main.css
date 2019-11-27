@@ -196,22 +196,83 @@ body {
   transition: all 0.3s ease;
   transform: scale3d(1.25, 1.25, 1.25);
 }
+.featured-posts__wrapper:hover .featured-posts-border:before {
+  animation: animate 4s linear infinite;
+}
 .featured-posts__detail {
   width: 90%;
-  border: 3px solid #8f7843;
+  box-shadow: inset 0 0 0 3px #827456;
   position: absolute;
   bottom: 55px;
   margin: 0 24px;
   box-sizing: border-box;
   z-index: 1;
   opacity: 0;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
+}
+.featured-posts-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.featured-posts-border:nth-child(1) {
+  transform: rotate(0deg);
+  height: 3px;
+}
+.featured-posts-border:nth-child(2) {
+  transform: rotate(90deg);
+  height: 3px;
+  left: 404px;
+  top: 50%;
+  width: 128px;
+}
+.featured-posts-border:nth-child(3) {
+  transform: rotate(180deg);
+  height: 3px;
+  bottom: 0;
+  width: 100%;
+  top: auto;
+}
+.featured-posts-border:nth-child(4) {
+  transform: rotate(270deg);
+  height: 3px;
+  top: 50%;
+  left: -62px;
+  width: 128px;
+}
+.featured-posts-border:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #b59f5b;
+}
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
 }
 .featured-posts__title {
   font-family: "JosefinSans-bold";
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+  height: 48px;
   text-transform: uppercase;
   margin: 0;
 }
@@ -330,6 +391,9 @@ body {
   padding: 10px 0 0 90px;
   overflow: hidden;
 }
+.main-content .post__header:hover .post__header-border:before {
+  animation: animate 4s linear infinite;
+}
 .main-content .post__header .post__header-border {
   position: absolute;
   display: block;
@@ -370,7 +434,6 @@ body {
   width: 100%;
   height: 3px;
   background: #b59f5b;
-  animation: animate 4s linear infinite;
 }
 @keyframes animate {
   0% {
