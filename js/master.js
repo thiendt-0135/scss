@@ -3,7 +3,7 @@
 $('.js-featured').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 3000,
   infinite: true,
   arrows: false,
@@ -39,3 +39,5 @@ $.truncateMe({
   trimTo: 18,
   add: '...',
 });
+
+$('.js-featured-posts').line(2, '...');
