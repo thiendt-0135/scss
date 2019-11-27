@@ -163,25 +163,100 @@
       transition: all .3s ease;
       transform: scale3d(1.25, 1.25, 1.25);
     }
+
+    &:hover #{$this}-border:before {
+      animation: animate 4s linear infinite;
+    }
   }
 
   &__detail {
     width: 90%;
-    border: 3px solid $color-tawny_5;
+    box-shadow: inset 0 0 0 3px $color-tawny_5;
     position: absolute;
     bottom: 55px;
     margin: 0 24px;
     box-sizing: border-box;
     z-index: 1;
     opacity: 0;
+    overflow: hidden;
     transition: all .3s ease-in-out;
+  }
+
+  &-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-border:nth-child(1) {
+    transform: rotate(0deg);
+    height: 3px;
+  }
+
+  &-border:nth-child(2) {
+    transform: rotate(90deg);
+    height: 3px;
+    left: 404px;
+    top: 50%;
+    width: 128px;
+  }
+
+  &-border:nth-child(3) {
+    transform: rotate(180deg);
+    height: 3px;
+    bottom: 0;
+    width: 100%;
+    top: auto;
+  }
+
+  &-border:nth-child(4) {
+    transform: rotate(270deg);
+    height: 3px;
+    top: 50%;
+    left: -62px;
+    width: 128px;
+  }
+
+  &-border:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $color-tawny_1;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    50% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    50.1% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+
+    100% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
   }
 
   &__title {
     @include format-text($font-josefinsans-bold, 20px, null, 24px);
     text-align: center;
+    height: 48px;
     text-transform: uppercase;
     margin: 0;
+    padding: 0 5px;
+    display: table-cell;
+    vertical-align: middle;
 
     & :nth-child(1) {
       text-decoration: none;
@@ -308,7 +383,6 @@
 
     &__header {
       position: relative;
-      // border: 3px solid $color-tawny_4;
       box-shadow: inset 0 0 0 3px $color-tawny_4;
       margin: 0 25px 0 0;
       width: 434px;
@@ -316,6 +390,10 @@
       box-sizing: border-box;
       padding: 10px 0 0 90px;
       overflow: hidden;
+
+      &:hover .post__header-border:before {
+        animation: animate 4s linear infinite;
+      }
     }
 
     &__header .post__header-border {
@@ -362,7 +440,7 @@
         width: 100%;
         height: 3px;
         background: $color-tawny_1;
-        animation: animate 4s linear infinite;
+        // animation: animate 4s linear infinite;
       }
     }
 
@@ -809,13 +887,8 @@
 
       .image {
         transition: all .3s ease;
-        transform: scale(1);
+        transform: scale(1.2);
       }
-    }
-
-    &__image:hover .image {
-      opacity: .7;
-      transform: scale(1.5);
     }
 
     &__content {
@@ -841,14 +914,19 @@
       transition: all .3s ease;
     }
 
-    &__link:hover {
-      color: $color-tawny_1;
-    }
-
     &:after {
       content: '';
       display: block;
       clear: both;
+    }
+
+    &:hover .image {
+      opacity: .7;
+      transform: scale(1.5);
+    }
+
+    &:hover .post__link {
+      color: $color-tawny_1;
     }
   }
 
