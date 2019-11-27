@@ -560,6 +560,10 @@
     .social {
       @include format-text($font-raleway-regular, 12px, null, null);
 
+      &__share {
+        padding-right: 10px;
+      }
+
       &__link {
         padding-right: 10px;
         transition: all .3s ease;
@@ -850,8 +854,12 @@
 
   &__item {
     border-bottom: 1px solid $color-gray;
-    padding: 12px 0;
     display: block;
+    cursor: pointer;
+
+    &:hover &-link {
+      color: $color-tawny_1;
+    }
 
     &-link {
       @include format-text($font-opensans-regular, 14px, $color-black, null);
@@ -859,13 +867,15 @@
       transition: all .3s ease;
     }
 
-    &-link:hover {
-      color: $color-tawny_1;
-    }
-
     &-number {
       @include format-text($font-raleway-regular, 12px, $color-tawny_1, null);
     }
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 12px 0;
+    display: block;
   }
 }
 
