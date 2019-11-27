@@ -254,6 +254,9 @@
     height: 48px;
     text-transform: uppercase;
     margin: 0;
+    padding: 0 5px;
+    display: table-cell;
+    vertical-align: middle;
 
     & :nth-child(1) {
       text-decoration: none;
@@ -884,13 +887,8 @@
 
       .image {
         transition: all .3s ease;
-        transform: scale(1);
+        transform: scale(1.2);
       }
-    }
-
-    &__image:hover .image {
-      opacity: .7;
-      transform: scale(1.5);
     }
 
     &__content {
@@ -916,14 +914,19 @@
       transition: all .3s ease;
     }
 
-    &__link:hover {
-      color: $color-tawny_1;
-    }
-
     &:after {
       content: '';
       display: block;
       clear: both;
+    }
+
+    &:hover .image {
+      opacity: .7;
+      transform: scale(1.5);
+    }
+
+    &:hover .post__link {
+      color: $color-tawny_1;
     }
   }
 
