@@ -883,6 +883,7 @@ body {
 }
 .recent-posts .post {
   margin-bottom: 22px;
+  cursor: pointer;
 }
 .recent-posts .post__image {
   float: left;
