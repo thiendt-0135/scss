@@ -35,7 +35,6 @@
   src: url("../font/Myriad-Pro-Regular.ttf");
 }
 body {
-  max-width: 1564px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -60,14 +59,18 @@ body {
 
 .header {
   position: relative;
+  max-width: 1660px;
+  margin: auto;
+  padding: 23px 48px 0 48px;
+  box-sizing: border-box;
 }
 .header__logo {
   font-family: "JosefinSans-bold";
   font-size: 70px;
   line-height: 145px;
   text-align: center;
-  margin: 0;
-  margin-bottom: 50px;
+  letter-spacing: 10px;
+  margin: 10px 0 40px 7px;
 }
 .header__logo-link {
   text-decoration: none;
@@ -79,7 +82,7 @@ body {
   left: 50%;
   top: 90%;
   transform: translateX(-50%);
-  width: 70px;
+  width: 65px;
   height: 4px;
   z-index: 1;
   background-color: #e1d9bd;
@@ -89,9 +92,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.menu .nav__item:nth-child(1) {
+  padding-left: 0;
+}
 .menu .nav__child {
   position: absolute;
-  text-align: center;
   opacity: 0;
   z-index: -1;
   transform: translateY(10%);
@@ -103,6 +108,9 @@ body {
 }
 .menu .nav__child--item {
   display: block;
+}
+.menu .nav__child--item:first-child {
+  padding-left: 17px;
 }
 .menu .nav__link {
   font-family: "OpenSans-Regular";
@@ -123,7 +131,7 @@ body {
   line-height: 0;
 }
 .menu .nav__item {
-  padding: 10px;
+  padding: 10px 17px;
 }
 .menu .nav__item:hover > .nav__link {
   color: #b59f5b;
@@ -137,7 +145,7 @@ body {
   margin: 0;
 }
 .menu .social__item {
-  padding: 10px;
+  padding: 3px 10px;
   display: inline-block;
   list-style-type: none;
 }
@@ -153,9 +161,20 @@ body {
   color: #b59f5b;
 }
 
-.featured-posts {
+.page-body {
+  max-width: 1660px;
+  margin: auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.featured-posts-carousel {
   display: flex;
   justify-content: space-between;
+}
+
+.featured-posts {
+  position: relative;
 }
 .featured-posts__image {
   width: 100%;
@@ -200,10 +219,10 @@ body {
   animation: animate 4s linear infinite;
 }
 .featured-posts__detail {
-  width: 90%;
+  height: 132px;
   box-shadow: inset 0 0 0 3px #827456;
   position: absolute;
-  bottom: 55px;
+  bottom: 15%;
   margin: 0 24px;
   box-sizing: border-box;
   z-index: 1;
@@ -222,10 +241,10 @@ body {
 }
 .featured-posts-border:nth-child(2) {
   transform: rotate(90deg);
+  transform-origin: 0% 0%;
   height: 3px;
-  left: 404px;
-  top: 50%;
   width: 128px;
+  left: 100%;
 }
 .featured-posts-border:nth-child(3) {
   transform: rotate(180deg);
@@ -275,7 +294,7 @@ body {
   height: 48px;
   text-transform: uppercase;
   margin: 0;
-  padding: 0 5px;
+  padding: 0 40px;
   display: table-cell;
   vertical-align: middle;
 }
@@ -289,7 +308,7 @@ body {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 9px;
 }
 .featured-posts__category-link {
   color: #b59f5b;
@@ -300,7 +319,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
   color: #fff;
 }
 .featured-posts__date {
@@ -320,12 +339,7 @@ body {
 .featured-posts__comment-link :first-child {
   color: #b59f5b;
 }
-
-.featured-area {
-  position: relative;
-}
-
-.slide-controls {
+.featured-posts__controls {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -351,8 +365,9 @@ body {
 }
 
 .main {
-  max-width: 1140px;
-  margin: 85px auto;
+  max-width: 1170px;
+  margin: 85px auto 57px;
+  box-sizing: border-box;
   padding: 0 15px;
   display: flex;
 }
@@ -363,18 +378,19 @@ body {
 }
 .main-content .post {
   position: relative;
-  margin: 50px 0 120px 0;
+  margin: 52px 0 117px 0;
 }
 .main-content .post__thumbnail {
-  width: 380px;
+  max-width: 380px;
   max-height: 297px;
   overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 61px;
 }
 .main-content .post__thumbnail:hover .post__image {
   transform: scale(1.5);
 }
 .main-content .post__image {
-  transform: scale(1.15);
   transition: all 0.3s ease;
 }
 .main-content .post__description {
@@ -382,16 +398,16 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-5%);
+  transform: translateY(-8%);
 }
 .main-content .post__header {
   position: relative;
   box-shadow: inset 0 0 0 3px #dbd0b0;
   margin: 0 25px 0 0;
   width: 434px;
-  height: 144px;
+  height: 166px;
   box-sizing: border-box;
-  padding: 10px 0 0 90px;
+  padding: 17px 0 0 92px;
   overflow: hidden;
 }
 .main-content .post__header:hover .post__header-border:before {
@@ -411,10 +427,10 @@ body {
 }
 .main-content .post__header .post__header-border:nth-child(2) {
   transform: rotate(90deg);
-  left: 361px;
+  left: 349px;
   right: 0;
   top: 50%;
-  width: 144px;
+  width: 166px;
   height: 3px;
 }
 .main-content .post__header .post__header-border:nth-child(3) {
@@ -426,9 +442,9 @@ body {
 }
 .main-content .post__header .post__header-border:nth-child(4) {
   transform: rotate(270deg);
-  left: -71px;
+  left: -82px;
   top: 50%;
-  width: 144px;
+  width: 166px;
   height: 3px;
 }
 .main-content .post__header .post__header-border:before {
@@ -473,7 +489,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 15px 0;
 }
 .main-content .post__title :nth-child(1) {
   color: #000;
@@ -482,9 +498,6 @@ body {
 }
 .main-content .post__title:hover > a {
   color: #b59f5b;
-}
-.main-content .post__footer {
-  margin-top: 40px;
 }
 .main-content .post__time {
   display: flex;
@@ -510,15 +523,15 @@ body {
   text-decoration: underline;
 }
 .main-content .post__content {
-  padding-left: 90px;
-  margin-bottom: 20px;
+  padding-left: 92px;
+  margin-bottom: 8px;
 }
 .main-content .post__content-preview {
   font-family: "OpenSans-Regular";
   font-size: 15px;
   color: #787878;
   line-height: 22px;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 .main-content .post__text {
   font-family: "OpenSans-Regular";
@@ -559,8 +572,11 @@ body {
   padding-right: 10px;
 }
 .main-content .post .social__link {
-  padding-right: 10px;
+  padding-right: 22px;
   transition: all 0.3s ease;
+}
+.main-content .post .social__facebook {
+  padding-right: 0;
 }
 .main-content .post .social__link:hover {
   color: #b59f5b;
@@ -579,10 +595,12 @@ body {
 }
 .instagram__title {
   font-family: "JosefinSans-bold";
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
   line-height: 15px;
-  margin: 50px 0 10px 0;
+  margin-top: 50px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -592,7 +610,8 @@ body {
   color: #b59f5b;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 .instagram__icon {
   vertical-align: middle;
@@ -604,7 +623,7 @@ body {
 .instagram .list-posts__item {
   flex-grow: 1;
   width: 185px;
-  height: 185px;
+  height: 217px;
   overflow: hidden;
   padding-right: 2px;
   outline: 0;
@@ -638,8 +657,8 @@ body {
   position: relative;
   min-height: 350px;
   border: 3px solid #dbd0b0;
-  margin-top: 105px;
-  padding-top: 106px;
+  margin-top: 96px;
+  padding-top: 95px;
   box-sizing: border-box;
 }
 .about-me .avatar {
@@ -653,9 +672,9 @@ body {
   position: absolute;
   overflow: hidden;
   cursor: pointer;
-  top: -99px;
+  top: -50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 35%);
 }
 .about-me__avatar .image {
   transition: all 0.5s ease;
@@ -665,9 +684,10 @@ body {
 }
 .about-me__title {
   font-family: "JosefinSans-bold";
-  font-size: 14px;
+  font-size: 13px;
   color: #000;
   text-transform: uppercase;
+  margin-top: 13px;
   text-align: center;
 }
 .about-me__desc {
@@ -675,13 +695,16 @@ body {
   font-size: 15px;
   color: #787878;
   text-align: center;
+  line-height: 25px;
   padding: 0 25px;
+  margin: 0;
 }
 .about-me__follow {
   font-family: "MrsSheppards-Regular";
   font-size: 24px;
   color: #b59f5b;
   text-align: center;
+  margin: 15px 0 20px 0;
 }
 .about-me .social {
   text-align: center;
@@ -721,7 +744,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   border: 0;
-  padding: 16px 30px;
+  padding: 16px 17px;
   outline: 0;
   background-color: #f4f7f6;
 }
@@ -732,7 +755,7 @@ body {
   font-family: "Raleway-Bold";
   font-size: 14px;
   color: #fff;
-  margin-top: 18px;
+  margin-top: 20px;
   position: relative;
   border: 0;
   padding: 15px;
@@ -807,9 +830,15 @@ body {
   display: inline-block;
   overflow: hidden;
   opacity: 1;
+  max-width: 85px;
+  max-height: 85px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.sidebar-instagram__pics-item:nth-child(3n) {
+  margin-right: 0;
 }
 .sidebar-instagram__pics-item .image-item {
-  transform: scale(1.5);
   transition: all 0.5s ease;
 }
 .sidebar-instagram__pics-item:hover .image-item {
@@ -817,9 +846,6 @@ body {
   opacity: 0.7;
 }
 
-.sidebar-categories {
-  margin-top: 35px;
-}
 .sidebar-categories__title {
   font-family: "JosefinSans-bold";
   font-size: 14px;
@@ -828,6 +854,7 @@ body {
   margin: 25px 0;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 15px;
 }
 .sidebar-categories__title:after {
   content: "";
@@ -862,12 +889,12 @@ body {
 }
 .sidebar-categories__link {
   text-decoration: none;
-  padding: 12px 0;
+  padding: 13px 0;
   display: block;
 }
 
 .recent-posts {
-  margin-top: 35px;
+  margin-top: 38px;
 }
 .recent-posts__title {
   font-family: "JosefinSans-bold";
@@ -877,6 +904,7 @@ body {
   margin: 25px 0;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 32px;
 }
 .recent-posts__title:after {
   content: "";
@@ -896,28 +924,32 @@ body {
 .recent-posts .post__image {
   float: left;
   overflow: hidden;
+  max-width: 70px;
+  max-height: 70px;
 }
 .recent-posts .post__image .image {
   transition: all 0.3s ease;
   transform: scale(1.2);
 }
 .recent-posts .post__content {
-  width: 195px;
-  padding-left: 15px;
+  width: 200px;
+  padding-left: 18px;
   box-sizing: border-box;
   float: left;
 }
 .recent-posts .post__title {
   font-family: "JosefinSans-bold";
-  font-size: 14px;
+  font-size: 13px;
   color: #000;
   text-transform: uppercase;
+  line-height: 18px;
   margin: 0;
 }
 .recent-posts .post__date {
   font-family: "OpenSans-Light";
   font-size: 12px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .recent-posts .post__link {
   text-decoration: none;
@@ -937,7 +969,7 @@ body {
   color: #b59f5b;
 }
 .recent-posts__search {
-  margin-top: 40px;
+  margin-top: 48px;
   position: relative;
 }
 .recent-posts__search-input {
@@ -1004,7 +1036,7 @@ body {
 }
 
 .banner {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .banner__image {
   transform: scale(1);
@@ -1014,7 +1046,7 @@ body {
   position: relative;
   width: 100%;
   height: 370px;
-  margin-top: 35px;
+  margin-top: 28px;
   overflow: hidden;
 }
 .banner__content:hover .banner__image {
@@ -1054,7 +1086,7 @@ body {
 }
 
 .facebook-page {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 .facebook-page .fb-page {
   margin-top: 10px;
@@ -1081,7 +1113,7 @@ body {
 }
 
 .tagcloud {
-  margin-top: 35px;
+  margin-top: 36px;
 }
 .tagcloud__title {
   font-family: "JosefinSans-bold";
@@ -1091,6 +1123,7 @@ body {
   margin: 25px 0;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 28px;
 }
 .tagcloud__title:after {
   content: "";
@@ -1116,7 +1149,7 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: border 0.3s ease;
-  padding: 5px 10px;
+  padding: 7px 14px;
   position: relative;
 }
 .tagcloud__link:before {
@@ -1162,16 +1195,21 @@ body {
 }
 
 .footer {
-  margin-top: 25px;
+  max-width: 1660px;
+  margin: auto;
+  padding: 25px 45px 0 45px;
+  box-sizing: border-box;
 }
 .footer__top {
   background-color: #f4f7f6;
 }
 .footer__top .footer-social {
   text-align: center;
+  margin: 0;
 }
 .footer__top .footer-social__item {
-  padding: 10px 15px;
+  padding: 11px 15px;
+  margin-right: 15px;
   display: inline-block;
   list-style-type: none;
 }
@@ -1188,7 +1226,7 @@ body {
 }
 .footer__bottom {
   text-align: center;
-  margin: 25px 0 30px 0;
+  margin-top: 14px;
 }
 .footer__on-top {
   font-family: "MrsSheppards-Regular";

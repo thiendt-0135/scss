@@ -3,12 +3,12 @@
 $('.js-featured').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 3000,
   infinite: true,
   arrows: false,
   dots: true,
-  appendDots: $('.slide-controls'),
+  appendDots: $('.featured-posts__controls'),
   dotsClass: 'custom-dots',
   customPaging: function(slider, i) {
     return '<span class="custom-dots__dot" role="button"></span>';
