@@ -1,0 +1,117 @@
+@media screen and (max-width: $breakpoint-md) {
+  .main {
+    display: block;
+    margin-top: 180px;
+    padding: 0;
+
+    &-content {
+      padding-right: 0;
+      margin: auto;
+      width: 100%;
+    }
+
+    .post {
+      &__description {
+        width: 60%;
+      }
+
+      &__content {
+        margin-bottom: 42px;
+      }
+    }
+  }
+
+  .instagram {
+    .list-posts {
+      &__item {
+        padding-right: auto;
+
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .about-me {
+      width: 60%;
+      max-width: 100%;
+      margin: 50px auto;
+      margin-top: 200px;
+    }
+
+    .news-letter {
+      width: 60%;
+      margin: 50px auto;
+    }
+
+    &-instagram {
+      width: 60%;
+      margin: 50px auto;
+
+      &__pics {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+          flex-basis: 33.33%;
+          max-width: initial;
+          max-height: initial;
+          box-sizing: border-box;
+          padding: 0 5px;
+          margin-bottom: 3px;
+          margin-right: 0;
+        }
+      }
+
+      .image-item {
+        width: 100%;
+      }
+    }
+
+    &-categories {
+      width: 60%;
+      margin: 50px auto;
+    }
+
+    .recent-posts {
+      width: 60%;
+      margin: 50px auto;
+
+      &__search-btn {
+        left: auto;
+        right: 0;
+      }
+
+      .post {
+        &__title {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .banner {
+      width: 60%;
+      margin: 50px auto;
+
+      &__image {
+        width: 100%;
+      }
+    }
+
+    .facebook-page {
+      width: 274px;
+      margin: 50px auto;
+    }
+
+    .tagcloud {
+      width: 60%;
+      margin: 50px auto;
+    }
+  }
+}

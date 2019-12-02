@@ -2,12 +2,16 @@
 
 .header {
   position: relative;
+  max-width: 1660px;
+  margin: auto;
+  padding: 23px 48px 0 48px;
+  box-sizing: border-box;
 
   &__logo {
     @include format-text($font-josefinsans-bold, 70px, null, 145px);
     text-align: center;
-    margin: 0;
-    margin-bottom: 50px;
+    letter-spacing: 10px;
+    margin: 10px 0 40px 7px;
 
     &-link {
       @include reset-link(none, $color-black);
@@ -19,10 +23,10 @@
       left: 50%;
       top: 90%;
       transform: translateX(-50%);
-      width: 70px;
+      width: 65px;
       height: 4px;
       z-index: 1;
-      background-color: $color-tawny;
+      background-color: #e1d9bd;
     }
   }
 }
@@ -33,12 +37,22 @@
 
   // menu
 
+  .btn-open {
+    border: 0;
+    background: transparent;
+    display: none;
+    outline: 0;
+  }
+
   .nav {
     $this: '.nav';
 
+    &__item:nth-child(1) {
+      padding-left: 0;
+    }
+
     &__child {
       position: absolute;
-      text-align: center;
       opacity: 0;
       z-index: -1;
       transform: translateY(10%);
@@ -46,10 +60,14 @@
       padding: 12px 0;
       background-color: $color-white;
       border: 1px solid $color-silver;
-      box-shadow: 0 0 4px $color-silver_1;
+      box-shadow: 0 0 4px $color-silver-1;
 
       &--item {
         display: block;
+      }
+
+      &--item:first-child {
+        padding-left: 17px;
       }
     }
 
@@ -72,10 +90,14 @@
     }
 
     &__item {
-      padding: 10px;
+      padding: 10px 17px;
+
+      &--close {
+        display: none;
+      }
 
       &:hover > #{$this}__link {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
 
       &:hover #{$this}__child {
@@ -88,11 +110,15 @@
 
   // social list
 
+  .social-button {
+    display: none;
+  }
+
   .social {
     margin: 0;
 
     &__item {
-      padding: 10px;
+      padding: 3px 10px;
       display: inline-block;
       list-style-type: none;
     }
@@ -102,19 +128,30 @@
       @include format-text (null, 17px, $color-black, 47px);
 
       &:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
       transition: all .3s ease;
     }
   }
 }
 
+.page-body {
+  max-width: 1660px;
+  margin: auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
 // featured posts
+
+.featured-posts-carousel {
+  display: flex;
+  justify-content: space-between;
+}
 
 .featured-posts {
   $this: '.featured-posts';
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 
   &__image {
     width: 100%;
@@ -140,12 +177,9 @@
 
   &__content {
     width: 33.33%;
-    padding-left: 4px;
+    padding: 3px;
+    box-sizing: border-box;
     position: relative;
-
-    &:nth-child(1) {
-      padding-left: 0;
-    }
   }
 
   &__wrapper {
@@ -170,10 +204,10 @@
   }
 
   &__detail {
-    width: 90%;
-    box-shadow: inset 0 0 0 3px $color-tawny_5;
+    height: 132px;
+    box-shadow: inset 0 0 0 3px $color-tawny-5;
     position: absolute;
-    bottom: 55px;
+    bottom: 15%;
     margin: 0 24px;
     box-sizing: border-box;
     z-index: 1;
@@ -195,10 +229,10 @@
 
   &-border:nth-child(2) {
     transform: rotate(90deg);
+    transform-origin: 0% 0%;
     height: 3px;
-    left: 404px;
-    top: 50%;
     width: 128px;
+    left: 100%;
   }
 
   &-border:nth-child(3) {
@@ -223,7 +257,7 @@
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: $color-tawny_1;
+    background-color: $color-tawny-1;
   }
 
   @keyframes animate {
@@ -254,7 +288,7 @@
     height: 48px;
     text-transform: uppercase;
     margin: 0;
-    padding: 0 5px;
+    padding: 0 40px;
     display: table-cell;
     vertical-align: middle;
 
@@ -268,10 +302,10 @@
     @include format-text($font-opensans-bold, 14px, null, 40px);
     text-align: center;
     text-transform: uppercase;
-    margin: 0;
+    margin-top: 9px;
 
     &-link {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
       text-decoration: none;
       padding: 0 2px;
     }
@@ -281,7 +315,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
     color: $color-white;
   }
 
@@ -297,23 +331,19 @@
       @include reset-link(none, $color-white);
 
       & :first-child {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
     }
   }
-}
 
-.featured-area {
-  position: relative;
+  &__controls {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 // navigation carousel
-
-.slide-controls {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 .custom-dots {
   $this: '.custom-dots';
@@ -341,8 +371,9 @@
 }
 
 .main {
-  max-width: 1140px;
-  margin: 85px auto;
+  max-width: 1170px;
+  margin: 85px auto 57px;
+  box-sizing: border-box;
   padding: 0 15px;
   display: flex;
 }
@@ -356,12 +387,15 @@
   .post {
     $this: '.post';
     position: relative;
-    margin: 50px 0 120px 0;
+    margin: 52px 0 117px 0;
 
     &__thumbnail {
-      width: 380px;
+      width: 50%;
+      max-width: 380px;
       max-height: 297px;
       overflow: hidden;
+      box-sizing: border-box;
+      margin-top: 61px;
 
       &:hover #{$this}__image {
         transform: scale(1.5);
@@ -369,26 +403,25 @@
     }
 
     &__image {
-      transform: scale(1.15);
       transition: all .3s ease;
     }
 
     &__description {
-      width: 434px;
+      width: 57%;
       position: absolute;
       top: 0;
       right: 0;
-      transform: translateY(-5%);
+      transform: translateY(-8%);
     }
 
     &__header {
       position: relative;
-      box-shadow: inset 0 0 0 3px $color-tawny_4;
+      box-shadow: inset 0 0 0 3px $color-tawny-4;
       margin: 0 25px 0 0;
-      width: 434px;
-      height: 144px;
+      width: 100%;
+      height: 166px;
       box-sizing: border-box;
-      padding: 10px 0 0 90px;
+      padding: 17px 5px 0 92px;
       overflow: hidden;
 
       &:hover .post__header-border:before {
@@ -411,11 +444,11 @@
 
       &:nth-child(2) {
         transform: rotate(90deg);
-        left: 361px;
-        right: 0;
-        top: 50%;
-        width: 144px;
+        transform-origin: 0% 0%;
         height: 3px;
+        top: 0;
+        width: 166px;
+        left: 100%;
       }
 
       &:nth-child(3) {
@@ -428,9 +461,9 @@
 
       &:nth-child(4) {
         transform: rotate(270deg);
-        left: -71px;
+        left: -82px;
         top: 50%;
-        width: 144px;
+        width: 166px;
         height: 3px;
       }
 
@@ -439,8 +472,7 @@
         position: absolute;
         width: 100%;
         height: 3px;
-        background: $color-tawny_1;
-        // animation: animate 4s linear infinite;
+        background: $color-tawny-1;
       }
     }
 
@@ -467,20 +499,20 @@
     }
 
     &__category-link {
-      @include format-text($font-opensans-bold, 14px, $color-tawny_1, 40px);
+      @include format-text($font-opensans-bold, 14px, $color-tawny-1, 40px);
       @include reset-link(none, null);
       text-transform: uppercase;
       margin-bottom: 0;
 
       &:hover {
-        color: $color-tawny_3;
+        color: $color-tawny-3;
       }
     }
 
     &__title {
       @include format-text($font-josefinsans-bold, 20px, null, 24px);
       text-transform: uppercase;
-      margin: 0;
+      margin: 0 0 15px 0;
 
       & :nth-child(1) {
         color: $color-black;
@@ -489,12 +521,8 @@
       }
 
       &:hover > a {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
-    }
-
-    &__footer {
-      margin-top: 40px;
     }
 
     &__time {
@@ -503,7 +531,7 @@
     }
 
     &__date {
-      @include format-text($font-opensans-light, 12px, $color-silver_2, 40px);
+      @include format-text($font-opensans-light, 12px, $color-silver-2, 40px);
       padding-right: 10px;
     }
 
@@ -513,23 +541,23 @@
       transition: all .3s ease;
 
       &:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
         text-decoration: underline;
       }
     }
 
     &__content {
-      padding-left: 90px;
-      margin-bottom: 20px;
+      padding-left: 92px;
+      margin-bottom: 8px;
 
       &-preview {
-        @include format-text($font-opensans-regular, 15px, $color-silver_3, 22px);
-        margin-top: 30px;
+        @include format-text($font-opensans-regular, 15px, $color-silver-3, 22px);
+        margin-top: 26px;
       }
     }
 
     &__text {
-      @include format-text($font-opensans-regular, 15px, $color-silver_3, 22px);
+      @include format-text($font-opensans-regular, 15px, $color-silver-3, 22px);
       margin-top: 30px;
     }
 
@@ -542,14 +570,14 @@
       transition: all .3s ease;
 
       &:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
     }
 
     &__icon {
       display: flex;
       justify-content: space-between;
-      border-bottom: 3px solid $color-tawny_2;
+      border-bottom: 3px solid $color-tawny-2;
       padding-bottom: 10px;
     }
 
@@ -565,12 +593,16 @@
       }
 
       &__link {
-        padding-right: 10px;
+        padding-right: 22px;
         transition: all .3s ease;
       }
 
+      &__facebook {
+        padding-right: 0;
+      }
+
       &__link:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
     }
 
@@ -579,7 +611,7 @@
       transition: color .3s ease;
 
       &:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
     }
   }
@@ -591,17 +623,20 @@
   position: relative;
 
   &__title {
-    @include format-text($font-josefinsans-bold, 18px, $color-black, 15px);
-    margin: 50px 0 10px 0;
+    @include format-text($font-josefinsans-bold, 16px, $color-black, 15px);
+    margin-top: 50px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
   }
 
   &__sub-title {
-    @include format-text($font-mrssheppards-regular, 24px, $color-tawny_1, null);
+    @include format-text($font-mrssheppards-regular, 24px, $color-tawny-1, null);
     text-align: center;
     font-weight: 400;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+    margin-top: 0;
   }
 
   &__icon {
@@ -616,7 +651,7 @@
     &__item {
       flex-grow: 1;
       width: 185px;
-      height: 185px;
+      height: 217px;
       overflow: hidden;
       padding-right: 2px;
       outline: 0;
@@ -630,6 +665,7 @@
 
     .slick-active {
       #{$this}__image-thumb {
+        width: 100%;
         transform: scale(1);
         opacity: 1;
       }
@@ -641,12 +677,14 @@
     }
 
     &__image-thumb {
-      transform: scale(1.5);
+      width: 100%;
+      transform: scale(1.25);
       transition: all .5s ease;
     }
 
     &__image {
       width: 100%;
+      overflow: hidden;
     }
   }
 }
@@ -660,9 +698,9 @@
 .about-me {
   position: relative;
   min-height: 350px;
-  border: 3px solid $color-tawny_4;
-  margin-top: 105px;
-  padding-top: 106px;
+  border: 3px solid $color-tawny-4;
+  margin-top: 96px;
+  padding-top: 95px;
   box-sizing: border-box;
 
   .avatar {
@@ -677,35 +715,38 @@
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    top: -99px;
+    top: -50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 35%);
 
     .image {
       transition: all .5s ease;
     }
 
     &:hover .image {
-      // transform: scale(1.25);
       transform: scale3d(1.15, 1.15, 1);
     }
   }
 
   &__title {
-    @include format-text($font-josefinsans-bold, 14px, $color-black, null);
+    @include format-text($font-josefinsans-bold, 13px, $color-black, null);
     text-transform: uppercase;
+    margin-top: 13px;
     text-align: center;
   }
 
   &__desc {
-    @include format-text($font-opensans-italic, 15px, $color-silver_3, null);
+    @include format-text($font-opensans-italic, 15px, $color-silver-3, null);
     text-align: center;
+    line-height: 25px;
     padding: 0 25px;
+    margin: 0;
   }
 
   &__follow {
-    @include format-text($font-mrssheppards-regular, 24px, $color-tawny_1, null);
+    @include format-text($font-mrssheppards-regular, 24px, $color-tawny-1, null);
     text-align: center;
+    margin: 15px 0 20px 0;
   }
 
   .social {
@@ -717,7 +758,7 @@
     }
 
     &__link:hover {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
     }
   }
 }
@@ -751,23 +792,23 @@
   &__input {
     width: 100%;
     box-sizing: border-box;
-    border: 0;
-    padding: 16px 30px;
+    border: 1px solid transparent;
+    padding: 16px 17px;
     outline: 0;
-    background-color: $color-blue_1;
+    background-color: $color-blue-1;
 
     &:focus {
-      border: 1px solid $color-tawny_1;
+      border: 1px solid $color-tawny-1;
     }
   }
 
   &__btn {
     @include format-text($font-raleway-bold, 14px, $color-white, null);
-    margin-top: 18px;
+    margin-top: 20px;
     position: relative;
     border: 0;
     padding: 15px;
-    background-color: $color-tawny_1;
+    background-color: $color-tawny-1;
     width: 100%;
     outline: 0;
     overflow: hidden;
@@ -783,7 +824,7 @@
       top: 0;
       left: -100%;
       height: 46px;
-      background-color: $color-tawny_3;
+      background-color: $color-tawny-3;
     }
 
     &:after {
@@ -794,7 +835,7 @@
       top: 0;
       left: -100%;
       height: 46px;
-      background-color: $color-tawny_3;
+      background-color: $color-tawny-3;
       transition: all .3s ease;
     }
 
@@ -829,9 +870,16 @@
       display: inline-block;
       overflow: hidden;
       opacity: 1;
+      max-width: 85px;
+      max-height: 85px;
+      margin-right: 3px;
+      margin-bottom: 3px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
 
       .image-item {
-        transform: scale(1.5);
         transition: all .5s ease;
       }
 
@@ -846,10 +894,9 @@
 // sidebar categories
 
 .sidebar-categories {
-  margin-top: 35px;
-
   &__title {
     @include title($font-josefinsans-bold, 14px, null, null);
+    margin-bottom: 15px;
   }
 
   &__item {
@@ -858,7 +905,7 @@
     cursor: pointer;
 
     &:hover &-link {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
     }
 
     &-link {
@@ -868,13 +915,13 @@
     }
 
     &-number {
-      @include format-text($font-raleway-regular, 12px, $color-tawny_1, null);
+      @include format-text($font-raleway-regular, 12px, $color-tawny-1, null);
     }
   }
 
   &__link {
     text-decoration: none;
-    padding: 12px 0;
+    padding: 13px 0;
     display: block;
   }
 }
@@ -882,10 +929,11 @@
 // sidebar recent posts
 
 .recent-posts {
-  margin-top: 35px;
+  margin-top: 38px;
 
   &__title {
     @include title($font-josefinsans-bold, 14px, null, null);
+    margin-bottom: 32px;
   }
 
   .post {
@@ -895,6 +943,8 @@
     &__image {
       float: left;
       overflow: hidden;
+      max-width: 70px;
+      max-height: 70px;
 
       .image {
         transition: all .3s ease;
@@ -903,21 +953,23 @@
     }
 
     &__content {
-      width: 195px;
-      padding-left: 15px;
+      width: 200px;
+      padding-left: 18px;
       box-sizing: border-box;
       float: left;
     }
 
     &__title {
-      @include format-text($font-josefinsans-bold, 14px, $color-black, null);
+      @include format-text($font-josefinsans-bold, 13px, $color-black, null);
       text-transform: uppercase;
+      line-height: 18px;
       margin: 0;
     }
 
     &__date {
       @include format-text($font-opensans-light, 12px, null, null);
       margin-top: 0;
+      margin-bottom: 0;
     }
 
     &__link {
@@ -937,25 +989,26 @@
     }
 
     &:hover .post__link {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
     }
   }
 
   &__search {
-    margin-top: 40px;
+    margin-top: 48px;
     position: relative;
+    overflow: hidden;
 
     &-input {
       width: 100%;
       height: 50px;
       padding: 18px 20px;
-      border: 0;
-      background-color: $color-blue_1;
+      border: 1px solid transparent;
+      background-color: $color-blue-1;
       outline: 0;
       box-sizing: border-box;
 
       &:focus {
-        border: 1px solid $color-tawny_1;
+        border: 1px solid $color-tawny-1;
       }
     }
 
@@ -969,7 +1022,7 @@
       outline: 0;
       overflow: hidden;
       cursor: pointer;
-      background-color: $color-tawny_1;
+      background-color: $color-tawny-1;
       color: $color-white;
       transition: all .3s ease;
 
@@ -981,7 +1034,7 @@
         width: 100%;
         top: -100%;
         left: -70%;
-        background-color: $color-tawny_3;
+        background-color: $color-tawny-3;
         transform: rotate(-40deg);
       }
 
@@ -993,7 +1046,7 @@
         width: 100%;
         top: -100%;
         left: -70%;
-        background-color: $color-tawny_3;
+        background-color: $color-tawny-3;
         transform: rotate(-40deg);
       }
 
@@ -1020,7 +1073,7 @@
 
 .banner {
   $this: '.banner';
-  margin-top: 40px;
+  margin-top: 30px;
 
   &__image {
     transform: scale(1);
@@ -1031,7 +1084,7 @@
     position: relative;
     width: 100%;
     height: 370px;
-    margin-top: 35px;
+    margin-top: 28px;
     overflow: hidden;
 
     &:hover #{$this}__image {
@@ -1059,7 +1112,7 @@
 // sidebar facebook page
 
 .facebook-page {
-  margin-top: 35px;
+  margin-top: 30px;
 
   .fb-page {
     margin-top: 10px;
@@ -1073,24 +1126,25 @@
 // sidebar tags
 
 .tagcloud {
-  margin-top: 35px;
+  margin-top: 36px;
 
   &__title {
     @include title($font-josefinsans-bold, 14px, null, null);
+    margin-bottom: 28px;
   }
 
   &__link {
     @include format-text($font-opensans-bold, 12px, $color-black, null);
     border: 0;
     cursor: pointer;
-    box-shadow: inset 0 0 0 3px $color-tawny_2;
+    box-shadow: inset 0 0 0 3px $color-tawny-2;
     color: $color-black;
     margin: 0 5px 5px 0;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     transition: border .3s ease;
-    padding: 5px 10px;
+    padding: 7px 14px;
     position: relative;
 
     &:before {
@@ -1120,11 +1174,11 @@
     }
 
     &:hover {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
     }
 
     &:hover:before {
-      border-color: $color-tawny_3;
+      border-color: $color-tawny-3;
       transition: border-color .3s, width .3s, height .3s;
       transition-delay: 0s, 0s, .25s;
       width: 100%;
@@ -1134,7 +1188,7 @@
     &:hover:after {
       transition: border-color 0s, width .3s, height .3s;
       transition-delay: 0s, .25s, 0s;
-      border-color: $color-tawny_3;
+      border-color: $color-tawny-3;
       width: 100%;
       height: 100%;
     }
@@ -1144,16 +1198,21 @@
 // footer
 
 .footer {
-  margin-top: 25px;
+  max-width: 1660px;
+  margin: auto;
+  padding: 25px 45px 0 45px;
+  box-sizing: border-box;
 
   &__top {
-    background-color: $color-blue_1;
+    background-color: $color-blue-1;
 
     .footer-social {
       text-align: center;
+      margin: 0;
 
       &__item {
-        padding: 10px 15px;
+        padding: 11px 15px;
+        margin-right: 15px;
         display: inline-block;
         list-style-type: none;
       }
@@ -1165,14 +1224,14 @@
       }
 
       &__link:hover {
-        color: $color-tawny_1;
+        color: $color-tawny-1;
       }
     }
   }
 
   &__bottom {
     text-align: center;
-    margin: 25px 0 30px 0;
+    margin-top: 14px;
   }
 
   &__on-top {
@@ -1181,7 +1240,7 @@
     transition: color .3s ease;
 
     &:hover {
-      color: $color-tawny_1;
+      color: $color-tawny-1;
     }
   }
 
@@ -1189,3 +1248,4 @@
     @include format-text($font-opensans-light, 12px, $color-black, null);
   }
 }
+
