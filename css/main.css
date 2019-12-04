@@ -198,6 +198,11 @@ body {
   padding-left: 4px;
   position: relative;
 }
+.featured-posts__content .featured-posts__image {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
 .featured-posts__content:nth-child(1) {
   padding-left: 0;
 }
@@ -647,6 +652,9 @@ body {
 }
 .instagram .list-posts__image {
   width: 100%;
+}
+.instagram .list-posts__image:hover .list-posts__image-thumb {
+  transform: scale(1);
 }
 
 .sidebar {
@@ -1190,6 +1198,56 @@ body {
   transition: border-color 0s, width 0.3s, height 0.3s;
   transition-delay: 0s, 0.25s, 0s;
   border-color: #edd99c;
+  width: 100%;
+  height: 100%;
+}
+.tagcloud .tagcloud__link {
+  border: 0;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px #eee;
+  color: #000;
+  padding: 5px 10px;
+  transition: color 0.5s ease;
+  position: relative;
+}
+.tagcloud .tagcloud__link:before {
+  border: 0 solid transparent;
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.tagcloud .tagcloud__link:after {
+  border: 0 solid transparent;
+  border-top-width: 3px;
+  border-right-width: 3px;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.tagcloud .tagcloud__link:hover {
+  color: #e1d9bd;
+}
+.tagcloud .tagcloud__link:hover:before {
+  border-color: #e1d9bd;
+  transition: border-color 0.3s, width 0.3s, height 0.3s;
+  transition-delay: 0s, 0s, 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.tagcloud .tagcloud__link:hover:after {
+  transition: border-color 0s, width 0.3s, height 0.3s;
+  transition-delay: 0s, 0.25s, 0s;
+  border-color: #e1d9bd;
   width: 100%;
   height: 100%;
 }
