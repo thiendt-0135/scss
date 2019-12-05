@@ -191,8 +191,6 @@ body {
 .featured-posts__image {
   width: 100%;
   opacity: 1;
-  transform: scale(1.5);
-  transition: all 0.8s ease;
 }
 .featured-posts .slick-active .featured-posts__image {
   width: 100%;
@@ -202,8 +200,6 @@ body {
 }
 .featured-posts .slick-active .featured-posts__detail {
   opacity: 1;
-  transform: scale(1);
-  transition: all 0.8s ease;
 }
 .featured-posts__content {
   width: 33.33%;
@@ -238,7 +234,7 @@ body {
   z-index: 1;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .featured-posts-border {
   position: absolute;
