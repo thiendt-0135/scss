@@ -156,8 +156,6 @@
   &__image {
     width: 100%;
     opacity: 1;
-    transform: scale(1.5);
-    transition: all .8s ease;
   }
 
   .slick-active {
@@ -170,8 +168,6 @@
 
     #{$this}__detail {
       opacity: 1;
-      transform: scale(1);
-      transition: all .8s ease;
     }
   }
 
@@ -213,7 +209,7 @@
     z-index: 1;
     opacity: 0;
     overflow: hidden;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 
   &-border {
