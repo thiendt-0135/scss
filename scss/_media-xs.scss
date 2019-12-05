@@ -1,0 +1,141 @@
+@media screen and (max-width: $breakpoint-xs) {
+  .header {
+    padding: 15px;
+
+    .menu {
+      &__left {
+        width: 185px;
+      }
+    }
+
+    &__logo {
+      font-size: 60px;
+    }
+
+    &__logo:after {
+      top: 50%;
+    }
+  }
+
+  .custom-dots {
+    & > :nth-child(n) {
+      margin: 7px;
+    }
+
+    &__dot {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .page-body {
+    padding: 0 15px;
+
+    .main {
+      margin-top: 115px;
+    }
+  }
+
+  .main-content {
+    .post {
+      margin-bottom: 50px;
+
+      &__header {
+        padding: 30px 0;
+        box-shadow: initial;
+        text-align: center;
+
+        &-border:nth-child(n) {
+          display: none;
+        }
+      }
+
+      &__content {
+        padding: 0;
+      }
+
+      &__thumbnail {
+        width: 100%;
+        max-width: initial;
+      }
+
+      &__image {
+        width: 100%;
+      }
+
+      &__description {
+        width: 100%;
+        position: initial;
+      }
+    }
+  }
+
+  .sidebar {
+    &-instagram {
+      width: 100%;
+    }
+
+    .recent-posts {
+      width: 100%;
+
+      .post {
+        margin-bottom: 22px;
+
+        &__image {
+          width: 35%;
+        }
+
+        &__content {
+          width: 65%;
+        }
+
+        &__title {
+          font-size: 12px;
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .banner {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .about-me {
+      margin-top: 150px;
+      width: 100%;
+    }
+
+    .news-letter {
+      width: 100%;
+    }
+
+    .tagcloud {
+      width: 100%;
+    }
+
+    &-categories {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    $this: '.footer';
+    padding: 0 15px;
+
+    &__top {
+      #{$this}-social {
+        padding-left: 0;
+
+        &__link {
+          font-size: 13px;
+        }
+
+        &__item {
+          padding: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

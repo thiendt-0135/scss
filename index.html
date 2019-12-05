@@ -16,47 +16,51 @@
   <!-- header -->
   <header class="header">
     <div class="menu">
-      <nav class="menu__left">
+      <button class="btn-open js-open">
+        <i class="fa fa-bars"></i>
+      </button>
+      <nav class="menu__left js-menu-left">
         <ul class="nav">
+          <li class="nav__item nav__item--close js-close"><i class="fa fa-times"></i></li>
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link js-nav-link">
               <span>home</span>
               <i class="fas fa-sort-down"></i>
             </a>
-            <ul class="nav nav__child">
+            <ul class="nav nav__child js-nav-child">
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Beauty</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Health</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Lifestyle</a></li>
             </ul>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link js-nav-link">
               <span>features</span>
               <i class="fas fa-sort-down"></i>
             </a>
-            <ul class="nav nav__child">
+            <ul class="nav nav__child js-nav-child">
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Beauty</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Health</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Lifestyle</a></li>
             </ul>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link js-nav-link">
               <span>positypes</span>
               <i class="fas fa-sort-down"></i>
             </a>
-            <ul class="nav nav__child">
+            <ul class="nav nav__child js-nav-child">
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Beauty</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Health</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Lifestyle</a></li>
             </ul>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link js-nav-link">
               <span>pages</span>
               <i class="fas fa-sort-down"></i>
             </a>
-            <ul class="nav nav__child">
+            <ul class="nav nav__child js-nav-child">
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Beauty</a>
               </li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Health</a></li>
@@ -64,11 +68,11 @@
             </ul>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link js-nav-link">
               <span>categories</span>
               <i class="fas fa-sort-down"></i>
             </a>
-            <ul class="nav nav__child">
+            <ul class="nav nav__child js-nav-child  ">
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Beauty</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Health</a></li>
               <li class="nav__item nav__child--item"><a class="nav__link nav__link--reset" href="#">Lifestyle</a></li>
@@ -79,23 +83,26 @@
           </li>
         </ul>
       </nav>
-      <ul class="social">
-        <li class="social__item">
-          <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__like"><i class="fab fa-linkedin-in"></i></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__instagram"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__google"><i class="fab fa-google-plus-g"></i></a>
-        </li>
-      </ul>
+      <div class="menu__right">
+        <button class="social-button js-social-button"><i class="fa fa-share-alt"></i></button>
+        <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link social__twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__like"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__google"><i class="fab fa-google-plus-g"></i></a>
+            </li>
+          </ul>
+      </div>
     </div>
     <h1 class="header__logo"><a href="#" class="header__logo-link">NOÉMI</a></h1>
   </header>
@@ -117,7 +124,7 @@
                 <a class="featured-posts__category-link" href="#">health</a>
                 <a class="featured-posts__category-link" href="#">lifestyle</a>
               </div>
-              <h3 class="featured-posts__title"><a class="js-featured-posts-carousel" href="#">from frapefruit to lemos to oranges, citrus dóe you good!</a></h3>
+              <h3 class="featured-posts__title"><a class="js-featured-posts-carousel" href="#">from frapefruit to lemos to oranges, citrus dóe you good!  from frapefruit to lemos to oranges, citrus dóe you good</a></h3>
               <div class="featured-posts__footer">
                 <p class="featured-posts__date">June 14, 2015</p>
                 <div class="featured-posts__comment">
@@ -180,7 +187,7 @@
               <div class="featured-posts__category">
                 <a class="featured-posts__category-link" href="#">Beauty</a>
               </div>
-              <h3 class="featured-posts__title"><a href="#" class="js-featured-posts-carousel">Keep Makeup Looking Fresh Take A Powder</a> </h3>
+              <h3 class="featured-posts__title"><a href="#" class="js-featured-posts-carousel">Keep Makeup Looking Fresh Take A Powder</a></h3>
               <div class="featured-posts__footer">
                 <p class="featured-posts__date">June 14, 2015</p>
                 <div class="featured-posts__comment">
@@ -576,7 +583,7 @@
         </section>
         <section class="sidebar-instagram">
           <h2 class="sidebar-instagram__title">follow@noemi.theme</h2>
-          <div class="instagram__pics">
+          <div class="sidebar-instagram__pics">
             <a href="#" class="sidebar-instagram__pics-item "><img src="./images/follow-theme1.png" class="image-item" alt="instagram"></a>
             <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme2.png" class="image-item" alt="instagram"></a>
             <a href="#" class="sidebar-instagram__pics-item"><img src="./images/follow-theme3.png" class="image-item" alt="instagram"></a>
