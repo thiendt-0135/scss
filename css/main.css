@@ -651,7 +651,6 @@ body {
 }
 .instagram .list-posts__image-thumb {
   width: 100%;
-  transform: scale(1.25);
   transition: all 0.5s ease;
 }
 .instagram .list-posts__image {

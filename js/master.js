@@ -34,11 +34,12 @@ $('.js-featured').slick({
 // carousel list image in instagram
 
 $('.js-post-item').slick({
-  slidesToShow: 1,
   autoplay: true,
   infinite: true,
   autoplaySpeed: 5000,
+  speed: 500,
   fade: true,
+  cssEase: 'linear',
   arrows: false,
 });
 
